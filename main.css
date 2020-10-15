@@ -1,0 +1,332 @@
+@font-face {
+    font-family: PoppinsRegular;
+    src: url(poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: PoppinsLight;
+    src: url(poppins/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: PoppinsBold;
+    src: url(poppins/Poppins-Bold.ttf.ttf);
+}
+
+@font-face {
+    font-family: PoppinsLight;
+    src: url(poppins/Poppins-ExtraBold.ttf.ttf);
+}
+
+body {
+    font-family: PoppinsBold;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: hsl(0, 100%, 74%);
+}
+
+main {
+    width: 100%;
+    background: url(images/bg-intro-mobile.png);
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_section {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: x-large;
+    font-weight: 700;
+    color: white;
+    width: 50%;
+}
+
+h3 {
+    font-size: medium;
+    font-weight: 400;
+    color: white;
+    width: 65%;
+}
+
+.fill_section {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.span {
+    font-size: medium;
+    font-weight: 400;
+    color: white;
+    width: 50%;
+    margin: 20px 0;
+    padding: 20px 50px;
+    border-radius: 10px;
+    text-align: center;
+    background: hsl(248, 32%, 49%);
+    box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
+}
+
+.form_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: 70%;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.confirmation {
+    width: 68%;
+    height: 80%;
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.confirmation_contain {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.circle {
+    color: rgb(85, 190, 85);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid ;
+    transition: 0.5s ease-in;
+    border-top-color: transparent;
+    animation: motion 1.2s ease-in-out ;
+}
+
+@keyframes motion {
+    0%{
+        color: royalblue;
+    }
+    50%{
+        color: palevioletred;
+    }
+    100%{
+        color: orangered;
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.confirm {
+    color: rgb(85, 190, 85);
+    font-weight: 800;
+    font-size: larger;
+}
+
+form {
+    padding: 10px 25px;
+}
+
+.contain {
+    position: relative;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.contain input {
+    display: block;
+    width: 90%;
+    padding: 15px 13px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.contain input::placeholder {
+    font-weight: 750;
+}
+
+.contain.success input {
+    border: 1px solid hsl(154, 59%, 51%);
+}
+
+.contain.failure input {
+    border: 1px solid hsl(0, 100%, 74%);
+}
+
+
+.contain small{
+    font-size: x-small;
+    color: hsl(0, 100%, 74%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 55px;
+    visibility: hidden;
+}
+
+.contain.failure small {
+    visibility: visible;
+}
+
+.contain i {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.contain.failure i {
+    visibility: visible;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: rgb(85, 190, 85);
+}
+
+
+em {
+    color: hsl(0, 100%, 74%);
+    font-style: normal;
+}
+
+.color {
+    font-size: 0.8em;
+}
+
+footer {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.attribution {
+    width: 100%;
+    font-size: medium;
+    font-weight: 400;
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        width: 100%;
+        height: 100vh;
+        background: url(images/bg-intro-desktop.png);
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .text_section {
+        width: 100%;
+        text-align: start;
+        place-items: start;
+        padding: 0 100px;
+    }
+
+    h1 {
+        font-size: xx-large;
+        font-weight: 750;
+        color: white;
+        width: 50%;
+    }
+    
+    h3 {
+        font-size: medium;
+        font-weight: 400;
+        color: white;
+        width: 80%;
+    }
+
+    .span {
+        font-size: medium;
+        font-weight: 400;
+        color: white;
+        width: 80%;
+        padding: 20px 0;
+    }
+
+    .form_container {
+        width: 80%;
+        padding: 10px 0;
+        overflow: hidden;
+    }
+
+    .confirmation {
+        width: 40%;
+    }
+
+    .contain {
+        position: relative;
+        width: 100%;
+        padding: 5px 0;
+    }
+    
+    .contain input {
+        display: block;
+        width: 90%;
+        padding: 15px 13px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+
+    .contain small{
+        position: absolute;
+        bottom: 0;
+        right: 15px;
+        top: 55px;
+        visibility: hidden;
+    }
+    
+    .contain.failure small {
+        visibility: visible;
+    }
+    
+    .contain i {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        visibility: hidden;
+    }
+    
+    .contain.failure i {
+        visibility: visible;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px 10px;
+    }
+
+
+}
